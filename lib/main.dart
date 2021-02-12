@@ -10,10 +10,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-        ),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
       home: MyHomePage(),
     );
   }
@@ -24,7 +24,8 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateMixin{
+class _MyHomePageState extends State<MyHomePage>
+    with SingleTickerProviderStateMixin {
   TabController tabController;
   @override
   void initState() {
@@ -38,21 +39,28 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
     return Scaffold(
       body: ListView(
         children: <Widget>[
-          SizedBox(height: 15.0,),
+          SizedBox(
+            height: 15.0,
+          ),
           Container(
             width: MediaQuery.of(context).size.width,
-          padding: EdgeInsets.only(right: 10.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              FloatingActionButton(onPressed: (){},
-                backgroundColor: Colors.green.withOpacity(0.3),
-                mini: true,
-                elevation: 0.0,
-                child: Icon(Icons.shopping_cart,color: Colors.black,size: 17.0,),
-              ),
-            ],
-          ),
+            padding: EdgeInsets.only(right: 10.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                FloatingActionButton(
+                  onPressed: () {},
+                  backgroundColor: Colors.green.withOpacity(0.3),
+                  mini: true,
+                  elevation: 0.0,
+                  child: Icon(
+                    Icons.shopping_cart,
+                    color: Colors.black,
+                    size: 17.0,
+                  ),
+                ),
+              ],
+            ),
           ),
           Padding(
             padding: const EdgeInsets.all(14.0),

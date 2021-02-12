@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 
 class PlantDetail extends StatefulWidget {
   final imgPath;
- final price;
- final plantType;
- final plantName;
+  final price;
+  final plantType;
+  final plantName;
 
-  const PlantDetail({Key key, this.imgPath, this.price, this.plantType, this.plantName}) : super(key: key);
+  const PlantDetail(
+      {Key key, this.imgPath, this.price, this.plantType, this.plantName})
+      : super(key: key);
 
   @override
   _PlantDetailState createState() => _PlantDetailState();
 }
 
 class _PlantDetailState extends State<PlantDetail> {
-
-
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -37,10 +37,8 @@ class _PlantDetailState extends State<PlantDetail> {
                         topLeft: Radius.circular(20.0),
                         topRight: Radius.circular(20.0),
                       ),
-                      color: Colors.white
-                  ),
+                      color: Colors.white),
                 ),
-
               ),
               Align(
                 alignment: Alignment.topLeft,
@@ -53,8 +51,7 @@ class _PlantDetailState extends State<PlantDetail> {
               ),
               Padding(
                 padding: EdgeInsets.only(
-                    top: 10.0, left: MediaQuery.of(context).size.width - 60.0
-                ),
+                    top: 10.0, left: MediaQuery.of(context).size.width - 60.0),
                 child: FloatingActionButton(
                   onPressed: () {},
                   backgroundColor: Color(0xFF4DA774),
@@ -72,14 +69,12 @@ class _PlantDetailState extends State<PlantDetail> {
                   width: 18.0,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(9.0),
-                      color: Colors.white
-                  ),
+                      color: Colors.white),
                   child: Center(
                     child: Text(
                       '1',
-                      style: TextStyle(color: Color(0xFF399D63),
-                          fontFamily: 'Montserrat'
-                      ),
+                      style: TextStyle(
+                          color: Color(0xFF399D63), fontFamily: 'Montserrat'),
                     ),
                   ),
                 ),
@@ -98,7 +93,7 @@ class _PlantDetailState extends State<PlantDetail> {
                           color: Color(0xFF8AC7A4)),
                     ),
                     Text(
-                      widget.plantName ,
+                      widget.plantName,
                       style: TextStyle(
                           fontFamily: 'Montserrat',
                           fontSize: 45.0,
@@ -175,8 +170,7 @@ class _PlantDetailState extends State<PlantDetail> {
                         style: TextStyle(
                             fontFamily: 'Montserrat',
                             fontSize: 25.0,
-                            fontWeight: FontWeight.w600
-                        ),
+                            fontWeight: FontWeight.w600),
                       ),
                       SizedBox(height: 12.0),
                       Text(
@@ -192,8 +186,7 @@ class _PlantDetailState extends State<PlantDetail> {
                         style: TextStyle(
                             fontFamily: 'Montserrat',
                             fontSize: 20.0,
-                            fontWeight: FontWeight.w600
-                        ),
+                            fontWeight: FontWeight.w600),
                       ),
                       SizedBox(height: 10.0),
                       Text(
